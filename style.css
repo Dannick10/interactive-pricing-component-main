@@ -22,7 +22,7 @@
     --ctatext:  hsl(226, 100%, 87%);
 
     --sliderbar: hsl(224, 65%, 95%);
-    --background:hsl(240, 22%, 96%);
+    --background:hsl(203, 67%, 98%);
 
     --btncolor: hsl(223, 50%, 87%);
 
@@ -40,7 +40,7 @@ body{
     justify-content: space-around;
     height: 100vh;
     font-family: var(--font);
-    
+  
 }
 
 header{
@@ -240,6 +240,10 @@ label.monthlybtn_lab::before,
 
 .important i {
     color: var(--colorPrimary2);
+}
+
+.value_money::before{
+    content: '$ ';
 }
 
 button{

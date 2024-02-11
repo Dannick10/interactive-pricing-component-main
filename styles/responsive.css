@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
 @media screen and (min-width: 700px){ 
+
+
     .back_footer{
         flex-direction: row;
         justify-content: space-between;
