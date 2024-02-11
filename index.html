@@ -11,7 +11,9 @@
   <title>Frontend Mentor | Interactive pricing component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+ 
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles/responsive.css">
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -51,30 +53,32 @@
           <div class="monthcircle"></div>
         </label>
 
-        <p> Yearly Billing</p>
-
-
-        <span class="msg"><p>-25%</p></span>
+        <div>
+          <p> Yearly Billing</p>
+          <span class="msg"><p>-25%</p></span>
+        </div>
       </div>
 
       <hr>
-      <div class="important">
-        <div>
-          <i class="fa-solid fa-check"></i>
-          <p>Unlimited websites</p>
-        </div>
-        <div>
-          <i class="fa-solid fa-check"></i>
-          <p> 100% data ownership</p>
-        </div>
-        <div>
-          <i class="fa-solid fa-check"></i>
-          <p> Email reports</p>
-        </div>
-      </div>
 
-      <div class="button">
-        <button>Start my trial</button>
+      <div class="back_footer">
+        <div class="important">
+          <div>
+            <i class="fa-solid fa-check"></i>
+            <p>Unlimited websites</p>
+          </div>
+          <div>
+            <i class="fa-solid fa-check"></i>
+            <p> 100% data ownership</p>
+          </div>
+          <div>
+            <i class="fa-solid fa-check"></i>
+            <p> Email reports</p>
+          </div>
+        </div>
+        <div class="button">
+          <button>Start my trial</button>
+        </div>
       </div>
   </section>
   
@@ -85,28 +89,7 @@
 
 
   <script src="https://kit.fontawesome.com/e98b48dcc9.js" crossorigin="anonymous"></script>
-  <script>
-  const rangeInputs = document.querySelectorAll('input[type="range"]')
-
-function handleInputChange(e) {
-  let target = e.target
-  if (e.target.type !== 'range') {
-    target = document.getElementById('range')
-  } 
-  const min = target.min
-  const max = target.max
-  const val = target.value
   
-  target.style.backgroundSize = (val - min) * 100 / (max - min) + '% 100%'
-
-  document.querySelector('.value_money').innerHTML = `$ ${val}.00`
-}
-
-rangeInputs.forEach(input => {
-  input.addEventListener('input', handleInputChange)
-})
-
-
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

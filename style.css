@@ -76,6 +76,7 @@ header{
     align-items: center;
     justify-content: space-around;
     border-radius: 20px;
+    max-width: 30em;
 }
 
 .card-title{
@@ -202,11 +203,18 @@ label.monthlybtn_lab::before,
 .msg p{
     bottom: 5px;
     padding: 3px 6px;
-    font-size: 0.5em;
+    font-size: 0.8em;
     background-color: var(--colorPrimary3);
     color: var(--colorDiscurcytext);
     font-weight: 800;
     border-radius: 20px;
+}
+
+
+
+.options div{
+    display: flex;
+    gap: 10px;
 }
 
 .important{
@@ -216,8 +224,8 @@ label.monthlybtn_lab::before,
 .important div{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-   
+    justify-content: space-evenly;
+   width: 14em;
 }
 
 .important i {
@@ -231,4 +239,13 @@ button{
     color: var(--ctatext);
     padding: 10px 30px;
     border-radius: 20px;
+  
 }
+
+.back_footer{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
