@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+
+  
+  <title>Frontend Mentor | Interactive pricing component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <header>
+      <div class="title">
+        <h1>Simple, traffic-based pricing</h1>
+      </div>
+      <div class="subtitle"
+        <p> Sign-up for our 30-day trial. No credit card required. </p>
+      </div>
+  </header>
+
+  <section class="card">
+      <div class="card-title">
+          <h2>1OOK PAGEVIEWS</h2>
+      </div>
+
+      <div class="ranger_section">
+        <input type="range" name="" id="ranger" min="0" max="100" value="0">
+      </div>
+      
+      <div class="value">
+
+        <h3 class="value_money">$ 0.00</h3>
+        <p>/ month</p>
+      </div>
+      
+      <div class="options">
+        <p>Monthly Billing</p>
+
+        <input type="checkbox" name="monthlybtn" id="monthlybtn">
+        <label for="monthlybtn" class="monthlybtn_lab">
+          <div class="monthcircle"></div>
+        </label>
+
+        <p> Yearly Billing</p>
+
+
+        <span class="msg"><p>-25%</p></span>
+      </div>
+
+      <hr>
+      <div class="important">
+        <div>
+          <i class="fa-solid fa-check"></i>
+          <p>Unlimited websites</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-check"></i>
+          <p> 100% data ownership</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-check"></i>
+          <p> Email reports</p>
+        </div>
+      </div>
+
+      <div class="button">
+        <button>Start my trial</button>
+      </div>
+  </section>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Daniel</a>.
+  </div>
+
+
+  <script src="https://kit.fontawesome.com/e98b48dcc9.js" crossorigin="anonymous"></script>
+  <script>
+  const rangeInputs = document.querySelectorAll('input[type="range"]')
+
+function handleInputChange(e) {
+  let target = e.target
+  if (e.target.type !== 'range') {
+    target = document.getElementById('range')
+  } 
+  const min = target.min
+  const max = target.max
+  const val = target.value
+  
+  target.style.backgroundSize = (val - min) * 100 / (max - min) + '% 100%'
+
+  document.querySelector('.value_money').innerHTML = `$ ${val}.00`
+}
+
+rangeInputs.forEach(input => {
+  input.addEventListener('input', handleInputChange)
+})
+
+
+  </script>
+</body>
+</html>
