@@ -93,7 +93,7 @@ input[type='range'],
 input[type='range']::-webkit-slider-runnable-track,
 input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
- 
+
 }
 
 input[type="range"] {
@@ -118,7 +118,15 @@ input[type="range"] {
     background-size: 18px;
     background-position: center;
     transition: background .3s ease-in-out;
+    filter: drop-shadow(0px 3px 8px var(--colorPrimary2) );
+    transition: 0.5s;
+    opacity: 0.9;
+    cursor: pointer;
+  }
+
+  input[type="range"]::-webkit-slider-thumb:hover{
     filter: drop-shadow(0px 8px 10px var(--colorPrimary2) );
+    opacity: 1;
   }
   
   input[type=range]::-webkit-slider-runnable-track  {
@@ -162,6 +170,7 @@ label.monthlybtn_lab{
     border-radius: 20px;
     padding: 2px;
     overflow: hidden;
+    cursor: pointer;
 }
 
 label.monthlybtn_lab::after{
@@ -203,7 +212,8 @@ label.monthlybtn_lab::before,
 .msg p{
     bottom: 5px;
     padding: 3px 6px;
-    font-size: 0.8em;
+    font-size: 0.7em;
+    position: relative;
     background-color: var(--colorPrimary3);
     color: var(--colorDiscurcytext);
     font-weight: 800;
@@ -239,9 +249,18 @@ button{
     color: var(--ctatext);
     padding: 10px 30px;
     border-radius: 20px;
-  
+    cursor: pointer;
 }
 
+button:hover{
+    filter: brightness(120%);
+}
+
+button:active{
+    filter:  brightness(100%);
+    position: relative;
+    bottom: -1px;
+}
 .back_footer{
     width: 80%;
     display: flex;
