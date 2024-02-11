@@ -11,6 +11,11 @@
         width: 150px;
     }
 
+    .msg p::after{
+    content: ' discount';
+
+    }
+
 
 
 }
