@@ -119,9 +119,8 @@ input[type="range"] {
     background-size: 18px;
     background-position: center;
     transition: background .3s ease-in-out;
-    filter: drop-shadow(0px 3px 8px var(--colorPrimary2) );
+    filter: drop-shadow(0px 3px 8px rgba(16, 213, 193, 0.637));
     transition: 0.5s;
-    opacity: 0.9;
     cursor: pointer;
   }
 
